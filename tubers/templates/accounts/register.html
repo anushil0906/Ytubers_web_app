@@ -1,0 +1,64 @@
+
+{%extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% load socialaccount %}
+
+{% providers_media_js %}
+
+  <main class="register container">
+    <h1 class="text-center mt-5 mb-5">
+      Register
+    </h1>
+     <div class="row">
+      <div class="col-md-4 offset-md-4 "> 
+       {% include 'messages.html' %}
+      </div>
+     </div>
+
+    <div class="row">
+      <div class="col-md-6 ">
+        <img src="{% static './assets/images/login-image.png' %}" class="img-fluid" alt="img">
+      </div>
+      
+
+      <form method = "POST" action = "{% url 'register' %}"class="col-md-5 offset-md-1">
+      	{% csrf_token %}
+        <div class="form-group">
+          <input name="firstname"  required="required" class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <input name="lastname"  required="required" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+          <input name="username"   required="required" class="form-control" placeholder="UserName">
+        </div>
+        <div class="form-group">
+          <input name="email" type="email" required="required" class="form-control" placeholder="Email Address">
+        </div>
+        <div class="form-group">
+          <input name="password" type="password" required="required" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input name="confirm_password" type="password" required="required" class="form-control" placeholder="Confirm Password">
+        </div>
+
+        <button type="submit" class="btn btn-accent form-btn w-100 mt-3 mb-3">Signup</button>
+        <div class="text-center">
+          OR
+        </div>
+        <a href="{% provider_login_url 'facebook' method='oauth2' %}"class="btn btn-primary form-btn w-100 mt-3 ">Facebook</a><br>
+        <a href="{% provider_login_url 'google' method='oauth2' %}"class="btn btn-accent form-btn w-100 mt-3 mb-3">Google</a>
+
+      </form>
+
+     
+    </div>
+  </main>
+
+
+
+{% endblock %}
