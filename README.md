@@ -17,9 +17,9 @@ djangocms-admin-style = "*"
 
 -> install pipenv for virtual environment
 
- -> **If you are using windows pip install pipenv **
+ -> If you are using windows pip install pipenv 
     
- -> **If using linux pip3 install pipenv **
+ -> If using linux pip3 install pipenv 
 
 -> use pipenv shell to start the virtual environment
 
