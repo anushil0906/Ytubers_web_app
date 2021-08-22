@@ -22,5 +22,6 @@ djangocms-admin-style = "*"
 -> make sure you have installed the packages
 
 # Run
-cd tubers
-python3 manage.py runserver
+-> cd tubers
+
+- >python3 manage.py runserver
