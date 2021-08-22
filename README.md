@@ -1,5 +1,6 @@
 # Ytubers_web_app
-An application developed using Django
+
+# An application developed using Django
 
 # Packages
 pillow = "*"
