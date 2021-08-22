@@ -13,10 +13,13 @@ django-allauth = "*"
 djangocms-admin-style = "*"
 
 # Installation
-git clone the repo
-install pipenv for virtual environment
-use pipenv shell to start the virtual environment
-make sure you have installed the packages
+-> git clone the repo
+
+-> install pipenv for virtual environment
+
+-> use pipenv shell to start the virtual environment
+
+-> make sure you have installed the packages
 
 # Run
 cd tubers
